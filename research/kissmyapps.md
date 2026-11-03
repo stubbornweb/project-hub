@@ -2,156 +2,226 @@
 
 Date of research: 2026-11-03.
 
-Important limit: the company's own Product Engine and Product Hub pages did not load. The site returned HTTP 429 (too many requests) on every try. The facts below come from press articles, the company's LinkedIn and CB Insights profiles, and search summaries. Each fact has its source.
+How to read this file:
+
+- "Their claim" means a fact that comes from kissmyapps.com. The company says it. We have not checked it.
+- "Reported" means a fact from a press article, a profile or a search summary. The source is named.
+- Their own pages are saved as plain text in `research/sources/kissmyapps-product-engine.md` and `research/sources/kissmyapps-product-hub.md`.
 
 ## 1. Summary
 
-The owner's system is partly similar to KissMyApps. Both run a path from idea to launch, with checks at each stage. KissMyApps builds and runs consumer mobile apps for its own income. The owner's system helps one developer run client work, websites and credentials. The main lesson: KissMyApps sets hard numbers for each idea. Its CEO says it uses a test budget of about $50,000, a three-month deadline and a $100,000 sales target (their claim, reported by dev.ua). The owner's gates use pass or fail filters and a verdict word, with no numbers.
+- Product Engine is KissMyApps' own AI system for launching and scaling consumer apps. The company says it has four parts: analytics, marketing, app development help and payments (their claim).
+- Product Hub is a page on their site. It shows apps that succeeded on their platform. It also explains their 11-step launch framework and lists open jobs. It is a showcase and a hiring page. It is not a status board.
+- Their claimed success rate is 80% on launches (their claim). Their claimed app count is 20+ (their claim). Their pages do not show prices or a client list.
+- Their pages do not show budgets, deadlines or sales targets for each idea. Earlier press numbers for this (a $50,000 test budget, three months, a $100,000 target) are from dev.ua, not from their site (reported).
+- The main lesson for this system: their 11-step path ends in a results review and a scale-or-close decision. Our pipeline ends at `publish`. We have no step after launch.
 
-## 2. What they are
+## 2. What they are, who they are for, and how they earn
 
-### Product Engine (KissMyApps)
+### Product Engine
 
-- What it is: an internal system that the company calls its "product engine". It runs analytics, payments and marketing tools for new apps. Source: https://forbes.ua/innovations/vid-startapu-do-kompanii-platformi-urokami-zrostannya-kiss-my-apps-cherez-zaluchennya-talantiv-ta-avtomatizatsiyu-protsesiv-dilitsya-ii-ceo-dmitro-lola-03072025-31019 (their claim, from a CEO interview, July 3, 2025).
-- Parts named in that article (their claim): an app store marketing system (ASO and Apple Search Ads), an "MVP launch library" that adds payments and analytics in hours, an analytics platform that predicts lifetime value with "accuracy above 95%", and AI tools for coding, testing and ad copy. Source: same URL.
-- Who it is for: the company's own products. The company builds apps for its own revenue. Source: https://www.therecursive.com/building-a-startup-during-war-without-vc-and-without-replacing-people-with-ai/ (interview, July 29, 2026).
-- Price: none found. It is not sold as a service in any source I could read.
+- What it is: "our own full-cycle AI product development platform that helps launch and scale B2C businesses" (their claim, Product Engine page). B2C means business to consumer: apps sold to ordinary people.
+- Four modules (their claim, Product Engine page):
+  - Kiss & Tell: analytics. Their pages say it uses AI agents that scan 1,000+ competitor apps every day and suggest niches.
+  - Kiss My Ads: marketing automation for app store ads, search optimisation and paid campaigns.
+  - Ready2Kiss: ready-made code libraries for payments, onboarding and analytics, plus AI testing and localisation for 15+ languages.
+  - Pay2Kiss: a payment gateway that routes card and other payments, handles subscriptions and retries.
+- Who it is for: their pages name two groups.
+  - Consumer app businesses that need launch and scale help (Product Engine page).
+  - Experts with traction who want to build a business with the company as co-founder (Co-founding page, see section 2.3).
+- Price: none. Their menu and footer have no pricing page. Product Engine is not sold to outside companies on any page we read.
 
-### Product Hub (KissMyApps)
+### Product Hub
 
-- What it is: a section of the company website. A search summary says it shows apps that grow on the platform. Source: https://www.kissmyapps.com/ua/product-hub (did not load; search summary only).
-- Who it is for: not confirmed. The page did not load.
-- Price: none found.
+- What it is: a page with three parts. It shows apps that succeeded on their platform (AI Remodel, Printer App, Chi and Botan). It explains the 11-step framework. It lists open roles.
+- Who it is for: visitors and job candidates. The page does not offer a service to buy.
+- Price: none.
 
-### Company facts
+### How the business makes money
 
-- Company type: a "platform company" that builds and launches consumer apps. Source: https://www.linkedin.com/company/kiss-my-apps (LinkedIn profile, loaded).
-- Model: products come from three sources. The company builds them in house, co-founds them with outside founders, or buys apps. Source: https://www.therecursive.com/building-a-startup-during-war-without-vc-and-without-replacing-people-with-ai/
-- Business model for the owner's comparison: none of the loaded pages mention selling software to other companies.
+Their pages do not say how each app earns money. They do not name ads, subscriptions or sales as the main source. Their pages say:
 
-## 3. Stages, steps and terms
+- They are a "platform company" that can "launch and scale businesses through in-house, co-founding, and M&A strategies" (their claim, About page). M&A means buying companies.
+- They are "9-figure status, fully bootstrapped" (their claim, About page). Bootstrapped means no outside investment. "9-figure" means a number with at least nine digits, in a currency the page does not name. They do not give a number.
+- Co-founded businesses: the founder runs the new business full time as CEO. The founder gets a monthly pay from the project budget. The company keeps the majority share (their claim, Co-founding page).
 
-| Stage or step | KissMyApps term (source URL) | This system's part | This system's term |
+Reported: Forbes Ukraine, July 2025, quotes the CEO on the company's model (reported). The Recursive, July 2026, says products come from three sources: in-house builds, co-founded apps and bought apps (reported).
+
+### 2.3 The co-founding offer
+
+This is a second product for outside experts, not for software buyers.
+
+- Who it is for: "experts with traction" (their claim). The page asks for a head or C-level person with team management experience and a plan for up to 3 years. It asks for a financial model and a pitch deck.
+- What they give: infrastructure, a marketing ecosystem (24/7 campaign tools, market data, frameworks), back office (finance, legal, payments, hiring) and tech (AI testing, localisation, an SDK, and the Product Engine modules) (their claim, Co-founding page).
+- Their steps (their claim, Co-founding page): application, pre-screening, CEO screening, meeting with the company CEO, culture check, business case, CFO screening, and a handshake.
+- Their claim: 30+ products have succeeded on the platform (Co-founding page). This does not match the 20+ figure on other pages (see section 6).
+
+## 3. Stages, steps and terms, compared with this system
+
+Their 11-step framework (Product Hub page, their claim). Our parts are named as in `docs/sources/2026-11-03-vision.md`.
+
+| # | Their step (their claim) | Our part today | Gap or match |
 | --- | --- | --- | --- |
-| Idea stage | "Niche-selection framework" for choosing products (https://forbes.ua/innovations/vid-startapu-do-kompanii-platformi-urokami-zrostannya-kiss-my-apps-cherez-zaluchennya-talantiv-ta-avtomatizatsiyu-protsesiv-dilitsya-ii-ceo-dmitro-lola-03072025-31019) | `idea-grill`, step 1: write the idea in the owner's own words | `IDEA-DECISION.md`, `opportunities` folder |
-| Validation or decision stage | About $50,000 test budget per idea, and a three-month test with a $100,000 sales target. Products that miss it are closed (https://dev.ua/en/news/kiss-my-apps-1788762387, their claim) | `idea-grill` filters and verdict (PROCEED, REFINE, PARK, REJECT). `idea-research` ranks "kill-questions" first | `IDEA-DECISION.md`, `RESEARCH-QUESTIONS.md` |
-| Brief or spec | none found | `project-brief` | `PROJECT-DESCRIPTION.md` |
-| Prototype | "MVP launch library" that builds an app in hours. Launch "in 24 hours" is possible (https://dev.ua/en/news/kiss-my-apps-1788762387, their claim) | `prototype-engine` commands: `new`, `scaffold`, `build`, `review` | Prototype folder `prototypes/<slug>/` |
-| Client or production build | In-house, co-founded or bought apps (https://www.therecursive.com/building-a-startup-during-war-without-vc-and-without-replacing-people-with-ai/) | `client-intake` (`INTAKE.md`, `PROPOSAL.md`). One repo per client project | Client repo. No `promote` command yet (vision doc, "How the parts connect") |
-| Delivery or launch | App store marketing system (ASO and Apple Search Ads) (https://forbes.ua/innovations/vid-startapu-do-kompanii-platformi-urokami-zrostannya-kiss-my-apps-cherez-zaluchennya-talantiv-ta-avtomatizatsiyu-protsesiv-dilitsya-ii-ceo-dmitro-lola-03072025-31019) | `prototype-engine publish` | `publish` command. Client handover: none |
-| Status or hub view | "Product Hub" (https://www.kissmyapps.com/ua/product-hub, did not load) | Project Hub: status board | "Project Hub" status board |
+| 1 | Idea and problem | `idea-grill` writes a verdict (PROCEED, REFINE, PARK, REJECT) | Match |
+| 2 | Market and audience analysis | `idea-research` ranks open questions. Kill-questions come first | Match in method. Theirs runs on data (see step 3) |
+| 3 | Competitor analysis. Kiss & Tell scans 1,000+ competitor apps daily | `opportunity-scan` is named in `WORKSPACE.md` but is not in the public skills repo (vision doc, next steps) | Gap: no scanner in the public repo |
+| 4 | Product decision and unique value | `idea-grill` verdict | Match |
+| 5 | Financial model and monetisation | None in `idea-grill` or `project-brief` (no budget or unit-economics step found in the skill text) | Gap |
+| 6 | Strategic goals and alignment | `project-brief` (`PROJECT-DESCRIPTION.md`, scope and out-of-scope) | Partial match. No goal numbers |
+| 7 | Product development | `prototype-engine new`, `scaffold`, `build`, `review` | Match |
+| 8 | Marketing strategy and channels | None | Gap |
+| 9 | Roadmap and milestones | The Hub status board is planned, not built | Gap until the Hub exists |
+| 10 | MVP launch (their Ready2Kiss kit, MVP in 1 month for Chi, their claim) | `prototype-engine publish` | Match in form. No time target |
+| 11 | Results analysis and scale or close | None. The Hub's analytics choice is open (vision doc, open questions) | Gap |
 
-Notes on the owner's terms (from the owner's own files):
-- `idea-grill` writes the verdict into `IDEA-DECISION.md`.
-- `prototype-engine` has the commands `new`, `scaffold`, `build`, `review`, `publish` and `extract-pattern` (source: `/home/yevhenii/www/prototype-engine/README.md`).
-- The vision doc says the Hub is not built yet. It names the handoffs still missing: brief to prototype, prototype to production, and status files for the Hub (`/home/yevhenii/www/project-hub-product/docs/sources/2026-11-03-vision.md`).
+Terms and parts that have no direct match:
 
-## 4. Same, different, and missing
+- Client work: their co-founding track is the nearest match to our client projects. Their model is a partner who runs the business, not a client who buys work. Our `client-intake` and client repos do not have that form.
+- Hub: their Product Hub is a public showcase. Our Hub is planned as a private status board for one owner.
+
+## 4. What is the same, what is different, and what this system does not have yet
 
 ### Same
 
-- Both use a stage path from idea to launch.
-- Both stop weak ideas early. KissMyApps closes products that miss its target. The owner's verdict can end at REJECT or PARK.
-- Both reuse a launch kit. KissMyApps has an "MVP launch library". The owner has `prototype-engine` patterns and `extract-pattern`.
-- Both measure results before going on. KissMyApps predicts lifetime value (their claim). The owner's Hub plans analytics on the status board (vision doc, open questions).
+- Both run a path from idea to launch, with checks at each stage. Their checks use a numbered list. Ours use verdict words.
+- Both stop weak ideas early. Their claim is that most products fail because each launch starts from zero, and their framework is built to stop that (their claim, Engine page).
+- Both reuse a launch kit. Their Ready2Kiss gives payments and onboarding code. Ours has `prototype-engine` patterns and `extract-pattern`.
+- Both use gates. Their site says "clear gates, clear metrics" (their claim, Product Hub page). Our gates are verdict words, and a failed gate ends the idea. Their site does not name the metrics.
 
 ### Different
 
-- KissMyApps builds consumer mobile apps for its own revenue. The owner's system serves client work and one developer's daily tasks.
-- The loaded KissMyApps pages mention no clients, client portals, credential vaults or chat inboxes. The owner's system has all four (vision doc). The company home page did not load, so this is limited.
-- KissMyApps uses numbers for each decision (budget, deadline, sales target). The owner's gates use pass or fail filters and a verdict word.
-- KissMyApps has a team of 151 to 500 people (CASES profile, https://cases.media/en/kiss-my-apps/) or 201 to 500 (LinkedIn). The owner's system is for one developer (vision doc).
+- They make consumer apps for their own business and for co-founded businesses. Our system serves client work and one developer's daily tasks (vision doc).
+- Their site shows no client portal, no chat inbox, no credential vault and no MCP server. Our system has all four (vision doc, capabilities 4, 5, 6, 7). Their pages cover marketing and payments instead.
+- They claim a large data base: 120m+ or 130m+ users, and 120m+ user sessions used for retention analysis (their claim, Engine and Hub pages). Our system has no user data yet.
+- They run a team with marketing, legal and finance roles. The open roles on their Engine and career pages show this (their claim). Our system is for one developer.
 
-### This system lacks
+### This system does not have yet
 
-- Numeric limits per idea: budget cap, deadline and sales target.
-- A dated check after launch. The owner's pipeline ends at `publish`.
-- A record of closed ideas and the reason for each close.
-- Revenue or usage data in the status file the Hub reads. The vision doc lists this as an open question.
+- A money step. Their step 5 covers the financial model. Our `idea-grill` and `project-brief` do not ask for one.
+- A marketing step. Their step 8 covers channels. We have none.
+- A results review after launch. Their step 11 ends in a scale or close decision. Our pipeline ends at `publish`.
+- A recorded list of closed ideas and the reason for each close. Their closure story is press-only (reported, see section 5).
+- Numeric limits per idea (a budget cap, a deadline and a target). Their site shows none. Press reports them (reported, dev.ua).
+- Revenue and usage fields in the status file that the Hub reads (vision doc, open questions).
 - A `promote` command from prototype to client repo (vision doc, "How the parts connect").
 
 ## 5. Evidence of success
 
-Facts that come from kissmyapps.com are marked "their claim". Facts from other sources name the source.
+All numbers below come from kissmyapps.com unless marked otherwise.
 
-- Founded in 2022. Source: https://www.linkedin.com/company/kiss-my-apps (LinkedIn, loaded). Also https://cases.media/en/kiss-my-apps/ (CASES, loaded).
-- Company age on 2026-11-03: about 4 years (from the 2022 founding year).
-- Team size: 201 to 500 employees (LinkedIn, loaded: https://www.linkedin.com/company/kiss-my-apps). CASES lists 151 to 500 (https://cases.media/en/kiss-my-apps/). A search summary lists 59 on LinkedIn. The sources disagree. Use the range, not one number.
-- Users: 100 million users (https://forbes.ua/innovations/vid-startapu-do-kompanii-platformi-urokami-zrostannya-kiss-my-apps-cherez-zaluchennya-talantiv-ta-avtomatizatsiyu-protsesiv-dilitsya-ii-ceo-dmitro-lola-03072025-31019, CEO interview, their claim). A search summary gives 130 million users (https://www.crunchbase.com/organization/kiss-my-apps, did not load). Sources disagree.
-- Downloads: more than 130 million downloads (https://www.therecursive.com/building-a-startup-during-war-without-vc-and-without-replacing-people-with-ai/, reported in an interview).
-- Apps or products: about 20 consumer products plus four internal products (The Recursive, same URL). 22 new products in two years, and more than 30 AI-powered apps across seven product verticals (Forbes article, their claim). 27 apps with about 6 million combined monthly users (https://dev.ua/en/news/kiss-my-apps-1788762387, reported). Sources disagree.
-- Closed products: five products closed in four and a half years, after missing the target (https://dev.ua/en/news/kiss-my-apps-1788762387, reported by dev.ua from the CEO).
-- Growth claim: "at least 3x" year over year (https://cases.media/en/kiss-my-apps/, quoting the company's About page, their claim). The About page did not load.
-- Revenue: described as a "9-figure" business. No revenue number is given (https://forbes.ua/innovations/vid-startapu-do-kompanii-platformi-urokami-zrostannya-kiss-my-apps-cherez-zaluchennya-talantiv-ta-avtomatizatsiyu-protsesiv-dilitsya-ii-ceo-dmitro-lola-03072025-31019, their claim).
-- Bootstrapped: "Bootstrapped from day one" (https://www.therecursive.com/building-a-startup-during-war-without-vc-and-without-replacing-people-with-ai/, interview).
-- Launch success rate: "80+%" and concept-to-profit in "2-4 weeks" (search summary of https://www.crunchbase.com/organization/kiss-my-apps, did not load; their claim).
-- Award: named among winners of the Fast Company 2026 Best Workplaces for Innovators list, AI and automation category. Source: https://www.cbinsights.com/company/kiss-my-apps (CB Insights summary, loaded). The date shown is Sep 8, 2026. The Fast Company page itself was not checked.
-- Press coverage: Forbes Ukraine (July 2025), The Recursive (July 2026), TechUkraine (2025, did not load), and Liga.net (June 2026, from CB Insights). Sources: URLs in section 8.
-- Client counts: none found.
+| Topic | Figure | Where it appears | Tag |
+| --- | --- | --- | --- |
+| Launch success rate | 80% (also "80%+" and "up to 80%") | Engine, Hub, About pages | Their claim |
+| Apps that succeeded on the platform | 20+ | Engine, Hub, About pages | Their claim. Co-founding page says 30+ (conflict) |
+| Apps in active scale backed by the company | 20+ | Hub page | Their claim |
+| Users worldwide | 130m+ (Engine, About). 120m+ (Hub) | Three pages | Their claim. Two figures differ |
+| Team size | 300+ "Kiss'ers" (employees) | About page | Their claim. Press says 151-500 (CASES) and 201-500 (LinkedIn) |
+| Growth | "YoY Growth X3" (about 3 times per year) | About page | Their claim |
+| Scale-up in the early utilities period | "x10 YoY scale-up" | About page | Their claim |
+| Financial status | "9-figure status, fully bootstrapped" | About page | Their claim. No revenue number |
+| Age and history | Idea in 2022. Became a platform company at the start of 2025. Began with a merger and acquisition of Tonti Laguna Mobile | About page | Their claim |
+| AI Remodel | "#1 AI-tool for Interior Design". Launched twice. Became #1 in 3 months. 3.5m+ users. 5m room redesigns. App Store rating 4.55 | Product page and Hub | Their claim |
+| Printer App | 10M+ downloads. 10,000+ supported printer models. App Store rating 4.6 | Product page and Hub | Their claim |
+| Chi | From idea to MVP in 1 month. App Store rating 4.7 | Product page and Hub | Their claim |
+| Botan | 1M+ installs | Hub page | Their claim |
+| Product SDK | Libraries "tested across 30+ products" | Engine page | Their claim |
+| Charity | 30M+ UAH direct donations. 150M+ UAH raised by their initiatives | About page | Their claim. Not business evidence |
+
+Other figures from outside sources:
+
+- Early history: "merger and acquisition" and the "utilities" period are on their About page (their claim). Press and profile sources agree the company was founded in 2022 (reported, LinkedIn and CASES).
+- Founded in 2022 (reported, LinkedIn: https://www.linkedin.com/company/kiss-my-apps and CASES: https://cases.media/en/kiss-my-apps/).
+- Users: 100 million (reported, Forbes, CEO interview). A search summary gives 130 million (reported, Crunchbase summary, not loaded).
+- Downloads: more than 130 million (reported, The Recursive, July 2026).
+- Products closed: five products closed after missing a target (reported, dev.ua, citing the CEO).
+- Budget rule: about $50,000 test budget per idea, three months, and a $100,000 sales target (reported, dev.ua). Not on their site.
+- Launch in 24 hours (reported, dev.ua). Their site says 1 month for Chi (their claim). See section 6.
+- Award: named among winners of the Fast Company 2026 Best Workplaces for Innovators list, AI and automation category (reported, CB Insights profile, Sep 8, 2026). The Fast Company page was not checked.
+- Press: Forbes Ukraine (July 2025), The Recursive (July 2026), dev.ua (2026), Liga.net (June 2026, via CB Insights). TechUkraine (2025) did not load.
+- Client counts: none found on their site or in press.
 - Client reviews: none found.
-- Employee reviews: only two on Glassdoor, per a search summary (https://www.glassdoor.com/Reviews/Kiss-My-Apps-Reviews-E10640335.htm, did not load).
-- Clutch profile: none found in search.
+- Employee reviews: two on Glassdoor, per a search summary (Glassdoor page did not load).
+- Prices: none on any page read.
 
-## 6. Name risk
+## 6. Corrections to the first version of this file
+
+The first version used press and search results. Their own pages now change these points:
+
+- The earlier claim that "KissMyApps sets hard numbers for each idea" is not supported by their site. The $50,000, three-month and $100,000 figures come from dev.ua (reported). Their site says "clear gates, clear metrics" but gives no numbers.
+- The earlier claim that "Launch in 24 hours is possible" (dev.ua) conflicts with their site. Their site says "From idea to MVP in 1 month" for Chi (their claim).
+- Product Hub: the earlier note said a search summary described it as showing apps that grow on the platform. The page shows apps that succeeded on the platform, the 11-step framework and open jobs (their claim).
+- Users: the earlier note gave 100m (Forbes) and 130m (search summary). Their own pages say 130m+ (Engine and About) and 120m+ (Hub). Use the company figure as "their claim".
+- Team: the earlier note gave 151-500 and 201-500. Their About page says 300+. Use the range from press and "300+" as their claim.
+- Success rate: the earlier note gave "80+%" from a search summary. Their pages say 80%, 80%+ and "up to 80%" (their claim).
+- Concept-to-profit in "2-4 weeks" (search summary): not found on their pages. Remove unless a later source confirms it.
+- Who it is for: the earlier note said "not confirmed". Their pages now name consumer app businesses and experts with traction (co-founding).
+- Business model: the earlier note said "builds apps for its own revenue". Their pages also describe co-founded businesses, where the company keeps the majority share (their claim).
+- The earlier note said the company's pages mention no clients, client portals or chat inboxes. This is still true for the pages read. The earlier company home page did not load and is now read.
+
+## 7. Name risk
 
 Names compared:
 
-- "Prototype Engine" (owner) and "Product Engine" (KissMyApps). Both end in "Engine". Both start with "Prot" or "Product". The sound is close. Both describe a fast build stage.
-- "Project Hub" (owner) and "Product Hub" (KissMyApps). The words differ by a few letters. Spoken, they sound close. The owner's vision doc says the final name is not decided (`/home/yevhenii/www/project-hub-product/docs/sources/2026-11-03-vision.md`, open questions).
+- "Prototype Engine" (owner) and "Product Engine" (KissMyApps). Both end in "Engine" and both describe a build or launch stage. The first words, "Prototype" and "Product", sound alike at the start.
+- "Project Hub" (owner) and "Product Hub" (KissMyApps). The words differ by one letter. They sound almost the same when spoken. KissMyApps uses "Product Hub" as the name of a public page on its site (their claim, page title).
+- The owner's vision doc says the final name is not decided (`docs/sources/2026-11-03-vision.md`, open questions).
 
-Search results:
+Search results (from the first version):
 
-- No software product named "Project Hub" in the results. Results are roundups of client-portal tools (for example https://productive.io/blog/project-management-software-with-a-client-portal/). The term is generic.
-- No product named exactly "Prototype Engine" in the results. Similar tools: `proto-cli` on npm (https://www.npmjs.com/package/proto-cli), `create-proto` (https://github.com/sherizan/proto) and the GOV.UK Prototype Kit (https://github.com/alphagov/govuk-prototype-kit).
-- No trademark record was found for either name in search. I could not search the USPTO trademark database. A search there is still needed.
+- No software product named "Project Hub" in the results. Results are roundups of client-portal tools, so the term is generic.
+- No product named exactly "Prototype Engine" in the results. Similar tools include `proto-cli` on npm (https://www.npmjs.com/package/proto-cli), `create-proto` (https://github.com/sherizan/proto) and the GOV.UK Prototype Kit (https://github.com/alphagov/govuk-prototype-kit).
+- No trademark record was found for either name in search. The USPTO trademark database was not searched.
 
-Plain statement: the names are close to KissMyApps' product names. I found no direct conflict in search. A trademark check is still needed before any public launch. This is not legal advice.
+Plain statement: KissMyApps uses "Engine" and "Hub" in the names of its own pages and modules. Their names are close to the owner's names. A trademark search is needed before any public launch. This is not legal advice.
 
-## 7. Ideas worth considering
+## 8. Ideas worth considering
 
-- Consider adding numeric limits to `IDEA-DECISION.md`: a spend cap, a deadline and a target. KissMyApps uses these (their claim).
-- Consider a dated check after launch, such as a three-month review, in the Hub status file.
-- Consider a log of closed ideas with the reason for each close. KissMyApps reports five closed products (reported).
-- Consider revenue and usage fields in the status file the Hub reads. The vision doc lists this as open.
-- Consider a trademark search for "Prototype Engine" and "Project Hub" before any public use or naming decision.
-- Consider keeping the owner's product purpose separate from KissMyApps. The owner's system serves client work. KissMyApps builds consumer apps.
-- Consider reading the Product Engine and Product Hub pages again later. The site was rate limited for the whole session.
+These are options for the owner to weigh. None is decided.
 
-## 8. Sources checked
+- Add a money step to the pipeline, as their step 5 does. It could go in `idea-grill` or `project-brief`.
+- Add a marketing step, as their step 8 does.
+- Add a results review after launch, as their step 11 does. A dated check, such as a three-month review, could feed the Hub status file.
+- Add numeric limits to `IDEA-DECISION.md`: a spend cap, a deadline and a target. Their site gives none, but press reports them (reported, dev.ua). Consider the owner's own numbers, not theirs.
+- Keep a list of closed ideas and the reason for each close. Their press story says they close products that miss a target (reported).
+- Look at their test habit: they run AI smoke tests and testing for localisation (their Ready2Kiss module). This could be a later idea for the prototype stage, not a first step.
+- Consider the co-founding terms as one reference if the owner ever offers a partner role. Their terms are: full-time CEO, monthly pay from the project budget, and the company keeps the majority share (their claim).
+- Run a trademark search for "Prototype Engine" and "Project Hub" before any public use or naming decision.
+- Keep the owner's client work and the consumer-app model apart in the docs. They solve different problems.
 
-Company pages (kissmyapps.com):
-- https://www.kissmyapps.com/product-engine: did not load (HTTP 429, tried 5 times)
-- https://www.kissmyapps.com/product-hub: did not load (HTTP 429, tried 3 times)
-- https://www.kissmyapps.com/: did not load (HTTP 429, tried 2 times)
-- https://www.kissmyapps.com/ua: did not load (HTTP 429)
-- https://www.kissmyapps.com/ua/product-hub: did not load (HTTP 429)
-- https://www.kissmyapps.com/ua/about: did not load (HTTP 429)
-- https://www.kissmyapps.com/co-founding: did not load (HTTP 429, tried 2 times)
-- https://www.kissmyapps.tech/: did not load (HTTP 301 redirect to kissmyapps.com, not followed)
-- Pricing, FAQ, terms, blog and case study pages on kissmyapps.com: not found and not fetched, because the site returned 429 on all pages.
+## 9. Sources checked
 
-Independent sources:
-- https://www.linkedin.com/company/kiss-my-apps: loaded
-- https://www.cbinsights.com/company/kiss-my-apps: loaded
-- https://cases.media/en/kiss-my-apps/: loaded
-- https://forbes.ua/innovations/vid-startapu-do-kompanii-platformi-urokami-zrostannya-kiss-my-apps-cherez-zaluchennya-talantiv-ta-avtomatizatsiyu-protsesiv-dilitsya-ii-ceo-dmitro-lola-03072025-31019: loaded
-- https://dev.ua/en/news/kiss-my-apps-1788762387: loaded
-- https://www.therecursive.com/building-a-startup-during-war-without-vc-and-without-replacing-people-with-ai/: loaded (paywalled after intro)
-- https://www.crunchbase.com/organization/kiss-my-apps: did not load (HTTP 403). Search summary only.
-- https://www.cbinsights.com/company/kiss-my-apps: loaded (listed above)
-- https://techukraine.org/2025/07/07/crisis-proof-tech-the-9-figure-playbook-of-ukraines-kiss-my-apps/: did not load (HTTP 403). Search summary only.
-- https://www.glassdoor.com/Overview/Working-at-Kiss-My-Apps-EI_IE10640335.11,23.htm: did not load (HTTP 403)
-- https://www.glassdoor.com/Reviews/Kiss-My-Apps-Reviews-E10640335.htm: search summary only
-- Clutch: searched. No Kiss My Apps profile found. Not fetched.
-- Search for trademark and name conflicts: searches only. Results listed in section 6.
-- https://www.npmjs.com/package/proto-cli, https://github.com/sherizan/proto, https://github.com/alphagov/govuk-prototype-kit: search results only, not fetched.
-- https://productive.io/blog/project-management-software-with-a-client-portal/: search result only, not fetched.
+Their own site (read 2026-11-03 with a browser, page text saved in `research/sources/`):
 
-Local files read:
-- `/home/yevhenii/www/project-hub-product/docs/sources/2026-11-03-vision.md`: read
-- `/home/yevhenii/www/prototype-engine/README.md`: read
-- `/home/yevhenii/www/skills/skills/product/idea-grill/SKILL.md`: read
-- `/home/yevhenii/www/skills/skills/product/idea-research/SKILL.md`: read
-- `/home/yevhenii/www/skills/skills/product/project-brief/SKILL.md`: read
-- `/home/yevhenii/www/skills/skills/product/client-intake/SKILL.md`: read
-- `/home/yevhenii/opportunities/`: listed only (one folder, `validated-problem-marketplace`). Not read, not changed.
+- https://www.kissmyapps.com/product-engine: read. Saved as `research/sources/kissmyapps-product-engine.md`.
+- https://www.kissmyapps.com/product-hub: read. Saved as `research/sources/kissmyapps-product-hub.md`.
+- https://www.kissmyapps.com/about: read (about, timeline, team, growth, culture, charity). Not saved as a source file.
+- https://www.kissmyapps.com/co-founding: read (co-founding offer, terms, hiring steps). Not saved as a source file.
+- https://www.kissmyapps.com/product/ai-remodel: read (product page, stats). Not saved.
+- https://www.kissmyapps.com/product/chi: read (product page, stats). Not saved.
+- https://www.kissmyapps.com/product/printer-app: read (product page, stats). Not saved.
+- https://www.kissmyapps.com/career: read (hiring steps, open-roles page). Not saved.
+- Not opened: /culture (its content is on the About page), /blog, /newsroom, and the individual job pages. Pricing: no pricing page is linked from the site menu or footer.
+
+Press and profile sources (from the first version, not re-checked in this run):
+
+- https://forbes.ua/innovations/vid-startapu-do-kompanii-platformi-urokami-zrostannya-kiss-my-apps-cherez-zaluchennya-talantiv-ta-avtomatizatsiyu-protsesiv-dilitsya-ii-ceo-dmitro-lola-03072025-31019: loaded (CEO interview, July 3, 2025).
+- https://www.therecursive.com/building-a-startup-during-war-without-vc-and-without-replacing-people-with-ai/: loaded (interview, paywalled after intro).
+- https://dev.ua/en/news/kiss-my-apps-1788762387: loaded.
+- https://www.linkedin.com/company/kiss-my-apps: loaded.
+- https://www.cbinsights.com/company/kiss-my-apps: loaded.
+- https://cases.media/en/kiss-my-apps/: loaded.
+- Liga.net (June 2026): listed in the first version via CB Insights. Not checked in this run.
+
+Could not read (in the first version and in this run):
+
+- https://www.crunchbase.com/organization/kiss-my-apps: HTTP 403. Search summary only.
+- https://techukraine.org/2025/07/07/crisis-proof-tech-the-9-figure-playbook-of-ukraines-kiss-my-apps/: HTTP 403. Search summary only.
+- https://www.glassdoor.com/Overview/Working-at-Kiss-My-Apps-EI_IE10640335.11,23.htm: HTTP 403. Search summary only.
+- Clutch: searched, no profile found, not fetched.
+
+Local owner files read (first version):
+
+- `docs/sources/2026-11-03-vision.md` and `docs/sources/2026-11-03-handoff.md` (this repo).
+- `/home/yevhenii/www/prototype-engine/README.md`.
+- `/home/yevhenii/www/skills/skills/product/` skills: `idea-grill`, `idea-research`, `project-brief`, `client-intake`. The grill skill has no numeric limits and uses PROCEED, REFINE, PARK and REJECT.
+- `/home/yevhenii/opportunities/`: one folder listed (`validated-problem-marketplace`), not read.
