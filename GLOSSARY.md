@@ -56,6 +56,10 @@ _Avoid_: state, status
 **Project**:
 An idea that received the PROCEED verdict. It keeps the slug of its idea.
 
+**Project repo**:
+The one repo of a project. It is made when the idea gets the PROCEED verdict. It holds the idea folder and the output of every stage, in order.
+_Avoid_: meta repository
+
 **Client project**:
 A project that a client pays for.
 
