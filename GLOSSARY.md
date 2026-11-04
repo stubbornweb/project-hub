@@ -57,8 +57,12 @@ _Avoid_: state, status
 An idea that received the PROCEED verdict. It keeps the slug of its idea.
 
 **Project repo**:
-The one repo of a project. It is made when the idea gets the PROCEED verdict. It holds the idea folder and the output of every stage, in order.
+The one repo of a project. It is made, or an existing repo is adopted, when the project starts. It holds the idea folder and the output of every stage, in order.
 _Avoid_: meta repository
+
+**Project file**:
+The small file in a project repo that names the project's stage and its client.
+_Avoid_: status file
 
 **Client project**:
 A project that a client pays for.
@@ -74,6 +78,9 @@ _Avoid_: deliverable
 A rough working version of a product, made to test an idea or to show a client.
 _Avoid_: project (for a prototype)
 
+**Quick experiment**:
+A prototype made from a pitch, before its idea becomes a project.
+
 **Site**:
 The website files of a prototype or a product.
 
@@ -82,7 +89,7 @@ A site that customers can open on the internet.
 _Avoid_: website, production site
 
 **Stage**:
-The step a project is in now. Each engine serves one stage.
+The step an idea or a project is in now: idea, design, prototype, build, live or closed. An idea before PROCEED is always in the idea stage. Each engine serves one stage.
 _Avoid_: status, mode
 
 **Slug**:
