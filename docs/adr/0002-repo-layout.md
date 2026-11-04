@@ -4,7 +4,7 @@ Each part of the studio has its own repo, and every project has one **project re
 
 | Repo | Holds | Visibility |
 | --- | --- | --- |
-| `studio` (today `project-hub`) | Glossary, system ADRs, the system brief, wayfinder maps, the one plugin marketplace | public |
+| `studio` (today `project-hub`) | Glossary, system ADRs, the system brief, wayfinder maps, the one plugin marketplace, the `studio` plugin | public |
 | `hub` | The Hub. Made when the Hub build starts | public |
 | `idea-engine` (today `YevheniiVolosiuk/skills`) | Idea Engine skills, as one plugin | public |
 | `prototype-engine` | Prototype Engine CLI, skills, templates and patterns, as one plugin | public |
