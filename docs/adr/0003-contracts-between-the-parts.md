@@ -101,4 +101,4 @@ The folder the Prototype Engine runs in decides its input:
   - `IDEA-DECISION-FORMAT.md` gets the `**Format:** 1` line, and its `**State:**` line becomes `**Verdict:**`. `DECISION-STATES.md`, the skills that read the line and the existing decision records change with it.
   - `project-brief` writes into `1-idea/`.
   - The Prototype Engine drops `PROTOTYPE_ENGINE_ROOT`, renames `--brief` to `--pitch`, rejects a wrong slug, reads the brief inside a project repo and sets the stage.
-- The format of a results check in `5-live/` is not decided yet.
+- ADR 0006 decides the format of a results check in `5-live/`.

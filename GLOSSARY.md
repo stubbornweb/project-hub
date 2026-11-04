@@ -101,6 +101,14 @@ The website files of a prototype or a product.
 A site that customers can open on the internet.
 _Avoid_: website, production site
 
+**Results check**:
+A dated record of the real results of a project after launch, with the owner's decision on what comes next. The owner makes one whenever they want, for an own project or a client project.
+_Avoid_: report, review
+
+**Results decision**:
+The owner's decision in a results check: GROW, CHANGE or STOP.
+_Avoid_: verdict (for a live project)
+
 **Stage**:
 The step an idea or a project is in now: idea, design, prototype, build, live or closed. An idea before PROCEED is always in the idea stage. Each engine serves one stage.
 _Avoid_: status, mode

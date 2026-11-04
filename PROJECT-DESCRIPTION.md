@@ -54,6 +54,7 @@ The Hub gets these capabilities one at a time. Each one works before the next on
 - **Selling the studio, or one of its parts, to other people.** The vision doc names other developers and product creators as the wider audience. Deferred: the studio is the owner's business tool first. A sale is a separate decision, and it brings a brand name and a trademark check (ADR 0001).
 - **An SEO and analytics engine.** Deferred until a real project needs it. The number of engines stays small.
 - **Slack and other channels in the inbox.** Deferred until a client needs one. A client's own Slack workspace probably needs a custom bridge.
+- **Reading results through analytics and payment APIs.** For now, the owner types the numbers into each results check (ADR 0006). It comes back when typing them becomes a real cost, for example with 3 or more live projects.
 - **Elapsed time in the client portal.** Not needed now. It comes back when a client asks for it.
 - **Automatic collection from Starter Story.** Its terms say nothing about AI analysis or scraping, and they allow republishing only for non-commercial use. For now, the owner reads it by hand. It comes back when Starter Story gives written permission, or a lawyer reads the terms and allows it.
 
@@ -86,9 +87,7 @@ The vision doc is [`docs/sources/2026-11-03-vision.md`](docs/sources/2026-11-03-
 
 ## Open questions
 
-- What is the format of a results check in `5-live/`, and which skill writes it?
 - How does a project take references (examples such as award sites) as input, and where does the project repo keep them?
 - Is `opportunity-scan` rebuilt, or is its mention removed from the Idea Engine?
-- Which tools count sign-ups and client feedback cheaply? The research did not check them.
 - Which numbers matter most on the Hub's board?
 - Will the owner find paying clients again? The decision record keeps this assumption open.
