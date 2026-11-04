@@ -45,7 +45,7 @@ The Hub gets these capabilities one at a time. Each one works before the next on
 - One inbox holds all chats with a client, starting with Telegram, WhatsApp, email and Facebook. The owner replies from there.
 - A protected area keeps project passwords and other secrets. It stays closed until the owner unlocks it, and no AI tool can open it.
 - AI tools work with the Hub through an MCP server (a standard way for AI tools to call an app).
-- WordCraft, PdfCraft and GridCraft make proposals, contracts, client PDFs and status reports. They stay optional while they are alpha quality.
+- WordCraft, PdfCraft and GridCraft make client proposals, contracts, client PDFs and status reports. They stay optional while they are alpha quality.
 
 ## Out of scope
 
@@ -55,12 +55,12 @@ The Hub gets these capabilities one at a time. Each one works before the next on
 - **An SEO and analytics engine.** Deferred until a real project needs it. The number of engines stays small.
 - **Slack and other channels in the inbox.** Deferred until a client needs one. A client's own Slack workspace probably needs a custom bridge.
 - **Elapsed time in the client portal.** Not needed now. It comes back when a client asks for it.
+- **Automatic collection from Starter Story.** Its terms say nothing about AI analysis or scraping, and they allow republishing only for non-commercial use. For now, the owner reads it by hand. It comes back when Starter Story gives written permission, or a lawyer reads the terms and allows it.
 
 **Never.** These are limits of the design. Each one protects a rule of the studio.
 
 - **Running an engine from the Hub.** The Hub shows the results of the engines and does not do their work again. Engines run in Claude Code, and each one works when the Hub is offline.
 - **Changing a project's stage or files from the Hub.** The Hub only reads. The owner sets the `build`, `live` and `closed` stages by hand in the project file (ADR 0003).
-- **Automatic collection from Starter Story.** Its terms say nothing about AI analysis or scraping, and they allow republishing only for non-commercial use. The owner reads it by hand. This changes only with written permission from Starter Story.
 - **AI that sends messages to clients.** AI can summarise client messages and draft replies. Only the owner sends.
 
 ## Constraints
@@ -73,7 +73,7 @@ The Hub gets these capabilities one at a time. Each one works before the next on
 | One slug names an idea in every part: `a-z`, `0-9` and single dashes, 40 characters or fewer. It never changes. | ADR 0003 |
 | The build order is: (1) check the concept, (2) engines work end to end, (3) the Hub, (4) client features and the GitHub integration. | decision record |
 | Step 2 is done when one real idea goes from `idea-grill` to a running prototype with no text copied by hand. | decision record |
-| AI makes errors when it reads a source: 1.8% to 3.3% for the best models on news-length articles, and more on long sources such as video transcripts. So the owner approves each practice proposal before it changes an engine. | [`ai-proposals-accepted.md`](https://github.com/stubbornweb/opportunities/blob/research/solo-product-studio/ideas/solo-product-studio/research/ai-proposals-accepted.md); ADR 0005 |
+| AI makes errors when it reads a source: 1.8% to 3.3% for the best models on news-style articles. Human checks find more errors on long and complex text, such as books. So the owner approves each practice proposal before it changes an engine. | [`ai-proposals-accepted.md`](https://github.com/stubbornweb/opportunities/blob/research/solo-product-studio/ideas/solo-product-studio/research/ai-proposals-accepted.md); ADR 0005 |
 | About one third of tested ideas improved their target metric at Microsoft, and no study covers solo builders. So a practice from a source is "worth testing" until the owner marks it proven. | [`outside-practices-improve-results.md`](https://github.com/stubbornweb/opportunities/blob/research/solo-product-studio/ideas/solo-product-studio/research/outside-practices-improve-results.md); ADR 0005 |
 | Starter Story has no API or export. It is read by hand. | [`starter-story-access-terms.md`](https://github.com/stubbornweb/opportunities/blob/research/solo-product-studio/ideas/solo-product-studio/research/starter-story-access-terms.md) |
 | The results check starts with no monthly cost: Google Analytics 4 for visits, Stripe for payments (fees per sale only). Reading visits through the Plausible API needs its $19 a month plan. | [`results-collection-cost.md`](https://github.com/stubbornweb/opportunities/blob/research/solo-product-studio/ideas/solo-product-studio/research/results-collection-cost.md) |
