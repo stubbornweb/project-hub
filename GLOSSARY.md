@@ -37,6 +37,19 @@ The engine that designs a project before it is prototyped.
 **Prototype Engine**:
 The engine that builds a prototype from a brief.
 
+**Practice**:
+A way of working that one engine follows. It is "proven" or "worth testing".
+
+**Source**:
+An article, video, book, case or piece of code that a practice comes from.
+
+**Practice proposal**:
+A change to one engine that the AI suggests from a source. The owner approves it or rejects it.
+
+**Reference**:
+An example, such as a website, that one project uses for its design or build. It does not change any engine.
+_Avoid_: practice (for an example that only one project uses)
+
 **Hub**:
 The part of the studio that shows the results of every engine in one place. It reads the engines' files and never changes them.
 _Avoid_: Project Hub, Cockpit
