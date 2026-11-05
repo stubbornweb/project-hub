@@ -42,4 +42,4 @@ The skill sorts the good points of the source into three groups and shows them i
 ## Consequences
 
 - The `studio` repo holds one plugin besides its documents.
-- The results check at the end of a project can later ask about "worth testing" rules. The map keeps this with the results check.
+- The results check asks the owner about each "worth testing" rule (ADR 0006).
