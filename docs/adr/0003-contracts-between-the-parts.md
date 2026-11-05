@@ -29,7 +29,7 @@ A project repo has this layout. A stage folder exists only when its stage has ou
 <slug>/
 ├── PROJECT.md          the project file
 ├── README.md           includes the entry note when the project joined at a later stage
-├── 1-idea/             the idea folder: IDEA-DECISION.md, research/, PROJECT-DESCRIPTION.md
+├── 1-idea/             the idea folder: IDEA-DECISION.md, research/, PROJECT-DESCRIPTION.md, references/ (ADR 0007)
 ├── 2-design/
 ├── 3-prototype/        prototype.yaml, EXPERIENCE.md, site/, qa/
 ├── 5-live/             results checks

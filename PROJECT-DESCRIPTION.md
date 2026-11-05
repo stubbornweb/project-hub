@@ -87,6 +87,5 @@ The vision doc is [`docs/sources/2026-11-03-vision.md`](docs/sources/2026-11-03-
 
 ## Open questions
 
-- How does a project take references (examples such as award sites) as input, and where does the project repo keep them?
 - Which numbers matter most on the Hub's board?
 - Will the owner find paying clients again? The decision record keeps this assumption open.
