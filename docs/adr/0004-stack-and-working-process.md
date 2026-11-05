@@ -10,9 +10,10 @@ One person maintains every part of the studio. So all code uses one toolchain, e
 
 ## Branches and merges
 
-- Agents work on a branch and open a pull request. Only the owner merges.
-- A Claude Code hook on the owner's computer blocks every `git push` to `main`, in all repos.
-- On public repos, GitHub protects `main`: changes come only through a pull request, and CI must pass. No review is required, because GitHub does not let the owner approve their own pull request.
+- Now: agents work on a branch and open a pull request. Only the owner merges. The `AGENTS.md` rules tell agents this.
+- Before the first client code or client credential goes into a repo:
+  - A Claude Code hook on the owner's computer blocks every `git push` to `main`, in all repos.
+  - On public repos, GitHub protects `main`: changes come only through a pull request, and CI must pass. No review is required, because GitHub does not let the owner approve their own pull request.
 
 ## CI
 
@@ -49,6 +50,8 @@ Every repo has its own short `AGENTS.md`, because an agent in one repo cannot se
 3. Run the repo's check before you open a pull request.
 4. Write all text in plain English (Simplified Technical English style, CEFR B1).
 
+`AGENTS.md` holds all the rules. `CLAUDE.md` has only one line, `@AGENTS.md`, so Claude Code loads the same rules as every other agent.
+
 Skills and prototype sites have no unit tests. A prototype site is checked in a real browser.
 
 ## New engine checklist
@@ -67,7 +70,9 @@ A new engine repo has:
 - **Node 25.** Rejected: it reached end of life on June 1, 2026. Node 26 is the LTS version until April 2029.
 - **Each repo picks its own tools.** Rejected: one person cannot maintain several toolchains.
 - **Only one shared rules file, linked from each repo.** Rejected: agents often do not follow links into another repo.
-- **GitHub Team, to protect `main` on private repos.** Rejected: the hook on the owner's computer already blocks pushes to `main`.
+- **`CLAUDE.md` as a symlink to `AGENTS.md`, or as a second rules file.** Rejected: a symlink can break on Windows and in some git setups, and a second rules file hides its rules from agents other than Claude.
+- **GitHub Team, to protect `main` on private repos.** Rejected: the hook on the owner's computer blocks pushes to `main`.
+- **The push hook and branch protection now.** Rejected: the owner ships first, and the `AGENTS.md` rules already keep agents off `main`.
 - **Version numbers and tags for each release.** Rejected: when `version` is set and not raised, users do not get new commits. A forgotten step then loses the update without a warning.
 - **Markdown lint and link checks in CI.** Rejected: more config and failed pull requests about style, and they check nothing that breaks a tool.
 - **The full security checklist now.** Rejected: no repo holds client code or credentials yet, and the owner ships first. Push protection is the exception, because a leaked key in a public repo cannot be taken back.
@@ -76,6 +81,6 @@ A new engine repo has:
 
 ## Consequences
 
-- Nothing changes by this decision. After the map, the setup follows: the hook, the CI workflows, the `AGENTS.md` files, the `LICENSE` files, the branch protection and push protection settings, and the removal of `"version": "0.1.0"` from the skills `plugin.json`.
+- Nothing changes by this decision. After the map, the setup follows: the CI workflows, the `AGENTS.md` and `CLAUDE.md` files, the `LICENSE` files, the push protection settings, and the removal of `"version": "0.1.0"` from the skills `plugin.json`.
 - The `engines` fields in the `prototype-engine` `package.json` files change to `>=26`.
 - "Every feature is a command" from the handoff checklist is a rule for the Hub's design, so the Hub build map decides it.
