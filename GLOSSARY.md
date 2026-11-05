@@ -47,8 +47,12 @@ An article, video, book, case or piece of code that a practice comes from.
 A change to one engine that the AI suggests from a source. The owner approves it or rejects it.
 
 **Reference**:
-An example, such as a website, that one project uses for its design or build. It does not change any engine.
-_Avoid_: practice (for an example that only one project uses)
+An example, such as a website or a prompt, that one project uses for its design or build, with what to take from it. It does not change any engine. A link that no project uses yet is not a reference.
+_Avoid_: practice, pattern (for an example that only one project uses)
+
+**Pattern**:
+A reusable part of a site, such as an interaction or a layout, that an engine keeps for many projects.
+_Avoid_: reference (for a part that many projects use)
 
 **Hub**:
 The part of the studio that shows the results of every engine in one place. It reads the engines' files and never changes them.
