@@ -23,7 +23,7 @@ Each repo has one GitHub Actions workflow with `permissions: contents: read`:
 | --- | --- |
 | `prototype-engine`, `hub`, code repos | `npm ci`, `vp check`, `vp test` on Node 26 |
 | `idea-engine` | `claude plugin validate` on the plugin |
-| `studio` | `claude plugin validate --strict` on the marketplace |
+| `solo-product-studio` | `claude plugin validate --strict` on the marketplace |
 | meta repos, `clients-meta` | no CI |
 
 ## Releases

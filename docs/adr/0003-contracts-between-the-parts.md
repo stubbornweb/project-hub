@@ -7,7 +7,7 @@ Each part of the studio writes plain files, and the next part reads them. These 
 - A slug uses only `a-z`, `0-9` and single dashes. It starts and ends with a letter or a digit, and it has 40 characters or fewer.
 - Every tool rejects a wrong slug and shows this rule. No tool changes a slug by itself.
 - A slug never changes after its meta repo is made. The public name of a product can change. It is written in the notes, not in a repo name.
-- A project slug must not be the name of a studio repo (`studio`, `hub`, `idea-engine`, `design-engine`, `prototype-engine`), must not be `clients`, and must not end in `-meta`.
+- A project slug must not be the name of a studio repo (`hub`, `idea-engine`, `design-engine`, `prototype-engine`), must not be `clients`, and must not end in `-meta`.
 - Client slugs are a separate list, so a client slug can be the same as a project slug.
 
 ## Local paths
