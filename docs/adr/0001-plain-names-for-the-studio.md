@@ -1,6 +1,6 @@
 # Plain names for the studio and its parts
 
-The owner may sell parts of the studio, or the whole studio, in the future, but not now. So every part gets a plain name now, and each part can stand alone. A brand name, with a trademark check, is chosen only when a part goes on sale. The names are: the studio (the whole system), the Idea Engine (before: Finding Engine), the Design Engine, the Prototype Engine, the Hub (before: Project Hub) and the idea workspace (before: opportunities). A repo for one part takes the part's name in lowercase with dashes and no prefix (`hub`, `idea-engine`, `design-engine`, `prototype-engine`, `idea-workspace`). A project repo takes the project's slug. The shared words are in [GLOSSARY.md](../../GLOSSARY.md).
+The owner may sell parts of the studio, or the whole studio, in the future, but not now. So every part gets a plain name now, and each part can stand alone. A brand name, with a trademark check, is chosen only when a part goes on sale. The names are: the studio (the whole system), the Idea Engine (before: Finding Engine), the Design Engine, the Prototype Engine, and the Hub (before: Project Hub). A repo for one part takes the part's name in lowercase with dashes and no prefix (`hub`, `idea-engine`, `design-engine`, `prototype-engine`). A code repo takes the project's slug, and a meta repo takes the slug with `-meta` at the end. The shared words are in [GLOSSARY.md](../../GLOSSARY.md).
 
 ## Considered options
 

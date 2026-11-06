@@ -37,7 +37,7 @@ The skill sorts the good points of the source into three groups and shows them i
 - **Every proposal as a GitHub issue.** Rejected: more steps and a list of waiting work to maintain.
 - **"Worth testing" practices in a separate file that no skill reads.** Rejected: nothing uses them, so nothing proves them.
 - **A practice becomes proven after a fixed number of projects.** Rejected: it needs a record of use per project.
-- **A new idea folder for each "no engine" point.** Rejected: the skill then writes outside the current repo, and one source rarely justifies a whole engine.
+- **A new meta repo for each "no engine" point.** Rejected: the skill then writes outside the current repo, and one source rarely justifies a whole engine.
 
 ## Consequences
 
