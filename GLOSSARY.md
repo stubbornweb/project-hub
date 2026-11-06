@@ -71,7 +71,7 @@ The result of judging an idea: PROCEED, REFINE, PARK or REJECT.
 _Avoid_: state, status
 
 **Project**:
-An idea that received the PROCEED verdict. It keeps the slug of its idea.
+An idea that received the PROCEED verdict, or an existing product that joins the studio. A project that comes from an idea keeps the slug of its idea.
 
 **Project repo**:
 The one repo of a project. It is made, or an existing repo is adopted, when the project starts. It holds the idea folder and the output of every stage, in order.
