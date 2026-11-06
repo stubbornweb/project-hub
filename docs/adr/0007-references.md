@@ -41,4 +41,4 @@ One line for each reference: a link, and what to take from it.
 - Nothing changes by this decision. After the map, these changes follow:
   - `PROJECT-DESCRIPTION-FORMAT.md` gets the "References" section, and `project-brief` asks for example sites.
   - `client-intake` saves the examples that a client sends.
-- The Prototype Engine gets the references when it reads the brief inside a project repo (ADR 0003).
+- The Prototype Engine gets the references when it reads the brief inside a meta repo (ADR 0003).

@@ -21,7 +21,7 @@ _Avoid_: client, visitor (for the client's buyer)
 ### The studio and its parts
 
 **Studio**:
-The whole system of the owner: the engines, the idea workspace, the Hub and the projects together. It is a plain working name, not a brand.
+The whole system of the owner: the engines, the meta repos, the Hub and the projects together. It is a plain working name, not a brand.
 _Avoid_: ecosystem, system, Stubborn Web
 
 **Engine**:
@@ -73,12 +73,15 @@ _Avoid_: state, status
 **Project**:
 An idea that received the PROCEED verdict, or an existing product that joins the studio. A project that comes from an idea keeps the slug of its idea.
 
-**Project repo**:
-The one repo of a project. It is made, or an existing repo is adopted, when the project starts. It holds the idea folder and the output of every stage, in order.
-_Avoid_: meta repository
+**Meta repo**:
+The private repo of one idea. It is made when work on the idea starts. It holds the notes, research, sources and the output of every stage, and it stays the same repo when the idea becomes a project.
+_Avoid_: project repo, idea folder, idea workspace
+
+**Code repo**:
+The repo that holds only the code of one product. It is made when the build starts.
 
 **Project file**:
-The small file in a project repo that names the project's stage and its client.
+The small file in a meta repo that marks a project and names its stage, its client and its code repo.
 _Avoid_: status file
 
 **Client project**:
@@ -96,7 +99,7 @@ A rough working version of a product, made to test an idea or to show a client.
 _Avoid_: project (for a prototype)
 
 **Quick experiment**:
-A prototype made from a pitch, before its idea becomes a project.
+A prototype made from a pitch, before its idea becomes a project. It is kept in the meta repo of its idea.
 
 **Site**:
 The website files of a prototype or a product.
@@ -120,18 +123,10 @@ _Avoid_: status, mode
 **Slug**:
 The one short name of an idea. The idea keeps it when it becomes a project, and every part of the studio uses the same slug for it.
 
-**Idea folder**:
-The folder of one idea. It holds the idea's decision record, research and brief.
-_Avoid_: idea workspace (for one idea), project memory
-
-**Idea workspace**:
-The place that holds all idea folders.
-_Avoid_: opportunities, project memory
-
 **Brief**:
 The written description of a project: what is built, for whom, and what is out of scope. Only a project has a brief.
 _Avoid_: project description, pitch
 
 **Pitch**:
-A one-line description of a quick experiment that has no idea folder.
+A one-line description of a quick experiment that has no decision record.
 _Avoid_: brief

@@ -1,6 +1,6 @@
 # Results check
 
-A results check records the real results of a live project and the owner's results decision: `GROW`, `CHANGE` or `STOP`. The Idea Engine skill `results-check` writes it. The owner runs the skill by hand, inside the project repo, whenever they want.
+A results check records the real results of a live project and the owner's results decision: `GROW`, `CHANGE` or `STOP`. The Idea Engine skill `results-check` writes it. The owner runs the skill by hand, inside the meta repo, whenever they want.
 
 ## Which projects
 

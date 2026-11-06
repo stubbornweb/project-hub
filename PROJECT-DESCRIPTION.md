@@ -27,7 +27,7 @@ In build order.
 
 **The engines**
 
-- The owner judges an idea and gets a verdict. At PROCEED, the idea becomes a project with its own project repo, and every part of the studio uses its slug.
+- The owner judges an idea and gets a verdict. At PROCEED, the idea becomes a project in its own meta repo, and every part of the studio uses its slug.
 - A project starts at the stage where it really is. An existing client site starts at the build stage and keeps one slug and one record.
 - The Design Engine designs a project before its prototype.
 - The Prototype Engine builds a prototype from the project's brief, with no text copied by hand.

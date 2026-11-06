@@ -6,78 +6,98 @@ Each part of the studio writes plain files, and the next part reads them. These 
 
 - A slug uses only `a-z`, `0-9` and single dashes. It starts and ends with a letter or a digit, and it has 40 characters or fewer.
 - Every tool rejects a wrong slug and shows this rule. No tool changes a slug by itself.
-- A slug never changes after its idea folder is made.
-- A project slug must not be the name of a studio repo (`studio`, `hub`, `idea-engine`, `design-engine`, `prototype-engine`, `idea-workspace`).
+- A slug never changes after its meta repo is made. The public name of a product can change. It is written in the notes, not in a repo name.
+- A project slug must not be the name of a studio repo (`hub`, `idea-engine`, `design-engine`, `prototype-engine`), must not be `clients`, and must not end in `-meta`.
 - Client slugs are a separate list, so a client slug can be the same as a project slug.
 
 ## Local paths
 
-Every tool uses two fixed paths and no environment variables:
+Every tool uses these fixed paths and no environment variables:
 
-- `~/www/idea-workspace/` holds the idea folders (`ideas/<slug>/`) and the client folders (`clients/<client-slug>/`).
-- `~/www/prototypes/<slug>/` holds quick experiments. It has no git.
+- `~/www/<slug>-meta/` is the meta repo of one idea or project.
+- `~/www/<slug>/` is the code repo of one product.
+- `~/www/clients-meta/<client-slug>/` is the folder of one client.
 
 ## Stages
 
 The stages are `idea`, `design`, `prototype`, `build`, `live` and `closed`. A project can start at any stage, skip stages and move back. An idea before PROCEED is always in the `idea` stage.
 
-## Project repo
+## Meta repo
 
-A project repo has this layout. A stage folder exists only when its stage has output.
+A meta repo has this layout. A stage folder exists only when its stage has output.
+
+```
+<slug>-meta/
+├── README.md           includes the entry note when the project joined at a later stage
+├── AGENTS.md
+├── CLAUDE.md           only `@AGENTS.md`
+├── .gitignore          excludes build output, such as node_modules/
+├── PROJECT.md          the project file, from PROCEED on
+├── 1-idea/             IDEA-DECISION.md, research/, PROJECT-DESCRIPTION.md, references/ (ADR 0007)
+├── 2-design/
+├── 3-prototype/        prototype.yaml, EXPERIENCE.md, site/, qa/
+├── 4-build/            notes about the build, such as plans. No code
+└── 5-live/             results checks
+```
+
+## Code repo
+
+A code repo has no project file and no stage folders:
 
 ```
 <slug>/
-├── PROJECT.md          the project file
-├── README.md           includes the entry note when the project joined at a later stage
-├── 1-idea/             the idea folder: IDEA-DECISION.md, research/, PROJECT-DESCRIPTION.md, references/ (ADR 0007)
-├── 2-design/
-├── 3-prototype/        prototype.yaml, EXPERIENCE.md, site/, qa/
-├── 5-live/             results checks
-└── package.json, src/ ...   the product code (build stage)
+├── README.md
+├── AGENTS.md           names the meta repo: "The notes of this project are in `stubbornweb/<slug>-meta`."
+├── CLAUDE.md           only `@AGENTS.md`
+├── LICENSE
+├── .github/workflows/  CI (ADR 0004)
+└── package.json, src/ ...
 ```
-
-The product code takes the repo root, so the build stage has no folder.
 
 ## Project file
 
-`PROJECT.md` is the only file the Hub needs from a project repo:
+`PROJECT.md` is the only file the Hub needs from a project:
 
 ```markdown
 # Acme booking site
 
 **Format:** 1
-**Stage:** prototype
+**Stage:** build
 **Client:** acme
+**Code:** stubbornweb/acme-booking
 ```
 
-- The `**Client:**` line exists only for a client project. An agent finds the client folder at `~/www/idea-workspace/clients/<client-slug>/`.
-- The repo name is the slug, so the file has no slug line.
-- A `PROJECT.md` at the root marks a project repo. The Hub and the engines use it to find project repos.
-- `project-start` sets the stage that the project enters at. Each engine sets its own stage when it starts work. The owner sets `build`, `live` and `closed` by hand.
+- The `**Client:**` line exists only for a client project. An agent finds the client folder at `~/www/clients-meta/<client-slug>/`.
+- The `**Code:**` line exists only when the project has a code repo. It gives the full `<owner>/<repo>` name, because a client's existing repo can be in another GitHub account.
+- The repo name is `<slug>-meta`, so the file has no slug line.
+- A `PROJECT.md` at the root of a meta repo marks a project. The Hub finds every idea and project as the `stubbornweb` repos whose names end in `-meta`, and it skips archived repos.
+- `setup-meta-repo` sets the stage that the project enters at. Each engine sets its own stage when it starts work. The owner sets `build`, `live` and `closed` by hand.
 
-An idea before PROCEED has no project file. The Hub reads its verdict from the `**Verdict:**` line of `IDEA-DECISION.md` in the idea workspace. This line was `**State:**` before, but the glossary avoids the word "state" for a verdict.
+An idea before PROCEED has no project file. The Hub reads its verdict from the `**Verdict:**` line of `1-idea/IDEA-DECISION.md`.
 
 ## Format versions
 
 `IDEA-DECISION.md` and `PROJECT.md` are the files the Hub parses. Each has a `**Format:** 1` line under the title. Raise the number only when a change would break the Hub. Other files have no version.
 
-## Starting a project
+## Setting up a meta repo
 
-`project-start` is an Idea Engine skill. It runs once, when an idea gets PROCEED, or when a project joins at a later stage:
+`setup-meta-repo <slug>` is an Idea Engine skill. It checks one meta repo and adds only what is missing, so it is safe to run again:
 
-1. It makes the repo `stubbornweb/<slug>`, or it adopts the repo if one already exists. A client project repo is private.
-2. It moves the idea folder from `~/www/idea-workspace/ideas/<slug>/` into `1-idea/`, if the idea folder exists.
-3. It moves a quick experiment from `~/www/prototypes/<slug>/` into `3-prototype/`, if one exists.
-4. It writes `PROJECT.md` with the stage the project enters at, and the entry note in `README.md` when the project joins at a later stage.
+1. If `stubbornweb/<slug>-meta` does not exist, it makes it as a private repo and clones it to `~/www/<slug>-meta/`.
+2. It adds `README.md`, `AGENTS.md`, `CLAUDE.md` and `.gitignore` if they are missing.
+3. If the verdict is PROCEED and there is no `PROJECT.md`, it writes `PROJECT.md` with `**Stage:** idea`.
+4. If there is no decision record, the repo is for an existing product that joins. It asks the owner for the stage and the code repo, then writes `PROJECT.md` and the entry note in `README.md`.
+5. If the verdict is REJECT, it asks the owner, then archives the repo.
+6. It reports what it changed. If nothing was missing, it changes nothing.
 
-After that, `project-brief` writes `1-idea/PROJECT-DESCRIPTION.md`.
+`idea-grill` runs it at the start and after the verdict. The owner runs it for an existing product, and before a quick experiment from a pitch. After PROCEED, `project-brief` writes `1-idea/PROJECT-DESCRIPTION.md`.
 
 ## Prototype Engine input
 
-The folder the Prototype Engine runs in decides its input:
+The Prototype Engine runs inside a meta repo and writes into `3-prototype/`:
 
-- Inside a project repo, it reads `1-idea/PROJECT-DESCRIPTION.md`, writes into `3-prototype/` and sets the stage to `prototype`. A project has one prototype. A new direction replaces the old one, and git keeps the old one.
-- Anywhere else, `--pitch "<one line>"` makes a quick experiment in `~/www/prototypes/<slug>/`.
+- In a meta repo with a project file, it reads `1-idea/PROJECT-DESCRIPTION.md` and sets the stage to `prototype`. A project has one prototype. A new direction replaces the old one, and git keeps the old one.
+- In a meta repo with no project file, `--pitch "<one line>"` makes a quick experiment.
 
 `prototype.yaml` has no `status:` key. Its `pitch:` key exists only for a quick experiment.
 
@@ -89,16 +109,14 @@ The folder the Prototype Engine runs in decides its input:
 - **A record of the tool version on every file.** Rejected: every skill must then know its version, and no repo has release tags.
 - **A `--from` option on `prototype-engine new`.** Rejected: the current folder already shows where the brief is.
 - **A `promote` command in the Prototype Engine.** Rejected: PROCEED is an Idea Engine verdict, and many projects have no prototype at PROCEED.
-- **Project creation inside `project-brief`.** Rejected: `project-brief` also runs for existing projects that have no brief.
-- **Product code in a `4-build/` folder.** Rejected: existing sites must then move their code and change their deploy settings.
+- **A separate skill for each event: one for PROCEED and one for an existing product that joins.** Rejected: two skills then make repos, and nothing repairs a meta repo that misses a file.
+- **The project file written by `project-brief`.** Rejected: `project-brief` also runs for existing projects that have no brief.
+- **A slug that changes with the product's public name.** Rejected: links, the Hub, `**Code:**` lines and local folders then break. ADR 0001 keeps brand names apart from working names for this reason.
 - **Several prototypes per project.** Rejected: every tool must then ask which prototype to use.
 - **Tools that change a wrong slug into a right one.** Rejected: a quietly changed slug breaks the rule of one slug everywhere.
 
 ## Consequences
 
-- Nothing changes by this decision. After the map, these changes follow:
-  - The Idea Engine gets the `project-start` skill. `WORKSPACE.md` uses the two fixed paths and drops `docs/ideas/<slug>/`.
-  - `IDEA-DECISION-FORMAT.md` gets the `**Format:** 1` line, and its `**State:**` line becomes `**Verdict:**`. `DECISION-STATES.md`, the skills that read the line and the existing decision records change with it.
-  - `project-brief` writes into `1-idea/`.
-  - The Prototype Engine drops `PROTOTYPE_ENGINE_ROOT`, renames `--brief` to `--pitch`, rejects a wrong slug, reads the brief inside a project repo and sets the stage.
+- The Idea Engine gets the `setup-meta-repo` skill and loses `project-start`. `idea-grill`, `project-brief` and `client-intake` use the paths above.
+- The Prototype Engine drops `PROTOTYPE_ENGINE_ROOT`, renames `--brief` to `--pitch`, rejects a wrong slug, runs inside a meta repo and sets the stage.
 - ADR 0006 decides the format of a results check in `5-live/`.
