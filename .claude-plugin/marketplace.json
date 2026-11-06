@@ -1,0 +1,20 @@
+{
+  "name": "studio",
+  "owner": {
+    "name": "Yevhenii Volosiuk",
+    "url": "https://github.com/stubbornweb"
+  },
+  "description": "The studio's one marketplace: the plugins of every engine.",
+  "plugins": [
+    {
+      "name": "idea-engine",
+      "source": {
+        "source": "github",
+        "repo": "stubbornweb/idea-engine"
+      },
+      "description": "Turn client posts into questions, proposals and logged pains, grill an idea to a verdict, research what could kill it, then define the project.",
+      "category": "product",
+      "keywords": ["product", "client-intake", "discovery", "idea-validation", "project-brief"]
+    }
+  ]
+}
