@@ -86,9 +86,11 @@ An idea before PROCEED has no project file. The Hub reads its verdict from the `
 1. If `stubbornweb/<slug>-meta` does not exist, it makes it as a private repo and clones it to `~/www/<slug>-meta/`.
 2. It adds `README.md`, `AGENTS.md`, `CLAUDE.md` and `.gitignore` if they are missing.
 3. If the verdict is PROCEED and there is no `PROJECT.md`, it writes `PROJECT.md` with `**Stage:** idea`.
-4. If there is no decision record, the repo is for an existing product that joins. It asks the owner for the stage and the code repo, then writes `PROJECT.md` and the entry note in `README.md`.
+4. If there is no decision record and no `PROJECT.md`, it asks the owner if this is an existing product that joins. It skips the question when the caller says that this is a new idea or a quick experiment. For a product that joins, it asks for the stage and the code repo, then writes `PROJECT.md` and the entry note in `README.md`.
 5. If the verdict is REJECT, it asks the owner, then archives the repo.
 6. It reports what it changed. If nothing was missing, it changes nothing.
+
+Each time it writes `PROJECT.md`, it asks the owner for the client, or none, so that every client project has its `**Client:**` line.
 
 `idea-grill` runs it at the start and after the verdict. The owner runs it for an existing product, and before a quick experiment from a pitch. After PROCEED, `project-brief` writes `1-idea/PROJECT-DESCRIPTION.md`.
 
