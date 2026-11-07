@@ -15,6 +15,16 @@
       "description": "Turn client posts into questions, proposals and logged pains, grill an idea to a verdict, research what could kill it, then define the project.",
       "category": "product",
       "keywords": ["product", "client-intake", "discovery", "idea-validation", "project-brief"]
+    },
+    {
+      "name": "prototype-engine",
+      "source": {
+        "source": "github",
+        "repo": "stubbornweb/prototype-engine"
+      },
+      "description": "Turn a brief or a pitch into a fast, distinctive website prototype inside the meta repo of an idea, then check it in a real browser.",
+      "category": "web",
+      "keywords": ["prototype", "website", "landing-page", "motion", "visual-qa"]
     }
   ]
 }
