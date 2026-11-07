@@ -17,6 +17,7 @@ Every tool uses these fixed paths and no environment variables:
 - `~/www/<slug>-meta/` is the meta repo of one idea or project.
 - `~/www/<slug>/` is the code repo of one product.
 - `~/www/clients-meta/<client-slug>/` is the folder of one client.
+- `~/www/prototype-engine/` is the local clone of the Prototype Engine. `extract-pattern` writes a new pattern into its `patterns/` folder, and the pattern reaches the plugin through a pull request.
 
 ## Stages
 
